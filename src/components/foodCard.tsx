@@ -1,6 +1,10 @@
 import styled from "@emotion/styled";
 import { ColorKey, getColor } from "../colors";
-import { FlexRow } from "../stylePrimitives";
+import { FlexCol, FlexRow } from "../stylePrimitives";
+import { MdFastfood, MdOutlineFireplace } from "react-icons/md";
+import { BiDollar } from "react-icons/bi";
+import { GiHotMeal } from "react-icons/gi";
+import { breakpoint } from "../breakpoints";
 
 export enum PriceRating {
   NONE = 0,
@@ -23,10 +27,13 @@ const RatingBarSingle = styled.div<RatingBarSingleProps>`
 
 const RatingRow = styled(FlexRow)`
   align-items: center;
-  width: 5em;
+  width: 5rem;
+  @media ${breakpoint.xs} {
+    width: 3rem;
+  }
 `;
 
-const RatingBar = ({ rating, label }: { rating: number; label: string }) => {
+const RatingBar = ({ rating, label }: { rating: number; label: React.ReactNode }) => {
   if (rating > 4 || rating < 1) {
     throw new Error("Rating out of bounds.");
   }
@@ -34,7 +41,7 @@ const RatingBar = ({ rating, label }: { rating: number; label: string }) => {
   const c = "red";
 
   return (
-    <FlexRow gap={"1em"}>
+    <FlexRow gap={"0.25rem"}>
       <span>{label}</span>
       <RatingRow gap={"3px"}>
         <RatingBarSingle widthPercent={w} color={c} />
@@ -46,20 +53,83 @@ const RatingBar = ({ rating, label }: { rating: number; label: string }) => {
   );
 };
 
-export const FoodCard = ({ price }: { price: PriceRating }) => {
+const Tag = styled.span`
+  background-color: red;
+  padding: 0.1rem 0.5rem;
+  font-size: 1rem;
+`;
+
+const TagsContainer = styled(FlexRow)`
+  flex-wrap: wrap;
+  row-gap: 5px;
+`;
+
+const Tags = ({ tags }: { tags: string[] }) => {
   return (
-    <>
-      <RatingBar rating={4} label={"Food"} />
-      <RatingBar rating={3} label={"Price"} />
-    </>
+    <TagsContainer>
+      {tags.map((a) => (
+        <Tag>#{a}</Tag>
+      ))}
+    </TagsContainer>
   );
 };
 
-export const FancyFoodCard = (price: PriceRating) => {
+const Content = () => {
   return (
-    <>
-      <RatingBar rating={4} label={"Food"} />
-      <RatingBar rating={3} label={"Price"} />
-    </>
+    <FlexCol>
+      <span>Description blurb thing</span>
+      <span>Prob a picture here</span>
+      <span>Links, address, website, googlemaps link</span>
+    </FlexCol>
+  );
+};
+
+export const FoodCard = ({ price }: { price: PriceRating }) => {
+  return (
+    <FlexRow>
+      <FlexCol>
+        <RatingBar rating={4} label={"Food"} />
+        <RatingBar rating={3} label={"Price"} />
+      </FlexCol>
+      <FlexCol>
+        <Content />
+      </FlexCol>
+    </FlexRow>
+  );
+};
+
+export const FancyFoodCardNR = ({ price }: { price: PriceRating }) => {
+  return (
+    <FlexRow>
+      <FlexCol gap="1rem">
+        <RatingBar rating={4} label={"Food"} />
+        <RatingBar rating={3} label={"Price"} />
+        <RatingBar rating={2} label={"Ambiance"} />
+        <RatingBar rating={3} label={"Service"} />
+        <Tags tags={["seattle", "mexican", "tacos"]} />
+      </FlexCol>
+      <FlexCol>
+        <Content />
+      </FlexCol>
+    </FlexRow>
+  );
+};
+
+export const FancyFoodCard = ({ price }: { price: PriceRating }) => {
+  return (
+    <FlexCol gap="1rem">
+      <FlexCol gap="0.25rem">
+        <FlexRow gap="1rem">
+          <RatingBar rating={4} label={<MdFastfood />} />
+          <RatingBar rating={3} label={<BiDollar />} />
+          <RatingBar rating={2} label={<MdOutlineFireplace />} />
+          <RatingBar rating={3} label={<GiHotMeal />} />
+        </FlexRow>
+        <Tags tags={["seattle", "mexican", "tacos", "blah", "balalj", "balalj"]} />
+      </FlexCol>
+      <FlexCol>
+        <Content />
+      </FlexCol>
+    </FlexCol>
   );
 };

@@ -18,6 +18,7 @@ export const H3 = styled.h3`
 
 type FlexProps = {
   gap?: string;
+  wrap?: boolean;
 };
 
 export const FlexRow = styled.div<FlexProps>`
@@ -66,7 +67,7 @@ type PageProps = {
 
 export const PageBox = styled.div<PageProps>`
   width: 100%;
-  maxwidth: ${(props) => props.maxWidth};
+  max-width: ${(props) => props.maxWidth};
   margin: 1em 1em 0 1em;
 `;
 

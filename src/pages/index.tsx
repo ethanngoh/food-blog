@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import React, { useState } from "react";
 
 import { ColorKey, getColor, GRAY_RANGE } from "../colors";
-import { FoodCard, PriceRating } from "../components/foodCard";
+import { FancyFoodCard, FoodCard, PriceRating } from "../components/foodCard";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
 import { useTextColor } from "../hooks/useTextColor";
 import { FlexCol, H1, Page } from "../stylePrimitives";
@@ -30,7 +30,7 @@ export const Index = () => {
     <Page maxWidth={maxPageWidth}>
       <Frame>
         <H1>Food Recs</H1>
-        <FoodCard price={PriceRating.FOUR} />
+        <FancyFoodCard price={PriceRating.FOUR} />
       </Frame>
     </Page>
   );
