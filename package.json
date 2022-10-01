@@ -5,6 +5,8 @@
   "dependencies": {
     "@emotion/css": "^11.10.0",
     "@emotion/styled": "^11.10.4",
+    "@googlemaps/react-wrapper": "^1.1.35",
+    "@googlemaps/typescript-guards": "^2.0.3",
     "@k-vyn/coloralgorithm": "^1.0.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -16,6 +18,7 @@
     "@types/react-animations": "^1.0.0",
     "@types/react-dom": "^18.0.6",
     "color": "^4.2.3",
+    "fast-equals": "^4.0.3",
     "husky": "^8.0.1",
     "lodash": "^4.17.21",
     "prettier": "^2.2.1",
@@ -58,6 +61,7 @@
     ]
   },
   "devDependencies": {
+    "@types/google.maps": "^3.50.2",
     "@types/react-color": "^3.0.6",
     "@types/smooth-scroll": "^16.1.1"
   },

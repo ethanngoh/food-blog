@@ -5,6 +5,7 @@ import { MdFastfood, MdOutlineFireplace } from "react-icons/md";
 import { BiDollar } from "react-icons/bi";
 import { GiHotMeal } from "react-icons/gi";
 import { breakpoint } from "../breakpoints";
+import { MapView } from "./googleMaps";
 
 export enum PriceRating {
   NONE = 0,
@@ -62,6 +63,7 @@ const Tag = styled.span`
 const TagsContainer = styled(FlexRow)`
   flex-wrap: wrap;
   row-gap: 5px;
+  gap: 5px;
 `;
 
 const Tags = ({ tags }: { tags: string[] }) => {
@@ -80,44 +82,19 @@ const Content = () => {
       <span>Description blurb thing</span>
       <span>Prob a picture here</span>
       <span>Links, address, website, googlemaps link</span>
+      <MapView
+        center={{ lat: 47.7134886, lng: -122.182679 }}
+        marker={{ lat: 47.7134886, lng: -122.1804903 }}
+        zoom={16}
+      />
     </FlexCol>
-  );
-};
-
-export const FoodCard = ({ price }: { price: PriceRating }) => {
-  return (
-    <FlexRow>
-      <FlexCol>
-        <RatingBar rating={4} label={"Food"} />
-        <RatingBar rating={3} label={"Price"} />
-      </FlexCol>
-      <FlexCol>
-        <Content />
-      </FlexCol>
-    </FlexRow>
-  );
-};
-
-export const FancyFoodCardNR = ({ price }: { price: PriceRating }) => {
-  return (
-    <FlexRow>
-      <FlexCol gap="1rem">
-        <RatingBar rating={4} label={"Food"} />
-        <RatingBar rating={3} label={"Price"} />
-        <RatingBar rating={2} label={"Ambiance"} />
-        <RatingBar rating={3} label={"Service"} />
-        <Tags tags={["seattle", "mexican", "tacos"]} />
-      </FlexCol>
-      <FlexCol>
-        <Content />
-      </FlexCol>
-    </FlexRow>
   );
 };
 
 export const FancyFoodCard = ({ price }: { price: PriceRating }) => {
   return (
     <FlexCol gap="1rem">
+      <h2>Due' Cucina Italiana (Totem Lake)</h2>
       <FlexCol gap="0.25rem">
         <FlexRow gap="1rem">
           <RatingBar rating={4} label={<MdFastfood />} />

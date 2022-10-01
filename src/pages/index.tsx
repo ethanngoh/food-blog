@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import React, { useState } from "react";
 
 import { ColorKey, getColor, GRAY_RANGE } from "../colors";
-import { FancyFoodCard, FoodCard, PriceRating } from "../components/foodCard";
+import { FancyFoodCard, PriceRating } from "../components/foodCard";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
 import { useTextColor } from "../hooks/useTextColor";
 import { FlexCol, H1, Page } from "../stylePrimitives";
