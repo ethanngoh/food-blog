@@ -1,0 +1,11 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus,
+.image-gallery-thumbnail:hover {
+  border: 2px solid #337ab7;
+}
+
+.image-gallery-thumbnails {
+  padding: 7px 0;
+}

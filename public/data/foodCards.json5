@@ -1,0 +1,43 @@
+[
+  {
+    // Due Cucina Totem Lake
+    food: 3,
+    price: 2,
+    value: 3,
+    ambiance: 3,
+    service: 0,
+    tags: ["kirkland", "pasta", "italian"],
+    placeId: "ChIJzWfj-acNkFQRYToIg4hbqBA",
+    notes: "Fresh pasta for cheap with good sauces. Carbonara and Lasagna were good. Good value for money.",
+    pics: [
+      // {
+      //   url: "dueCucina/test.jpg",
+      //   foodLocal: Rating.FOUR,
+      //   priceLocal: Rating.ONE,
+      //   foodGlobal: Rating.FOUR,
+      //   priceGlobal: Rating.ONE,
+      //   name: "Fooood"
+      // },
+      // {
+      //   url: "dueCucina/test.jpg",
+      //   foodLocal: Rating.FOUR,
+      //   priceLocal: Rating.ONE,
+      //   foodGlobal: Rating.FOUR,
+      //   priceGlobal: Rating.ONE,
+      //   name: "Fooood"
+      // }
+    ]
+  },
+  {
+    // El rinconcito bellevue
+    food: 3,
+    price: 1,
+    value: 3,
+    ambiance: 1,
+    service: 0,
+    tags: ["bellevue", "tacos", "mexican"],
+    placeId: "ChIJuavoTwFtkFQR2NF17zsFLt4",
+    notes: "Great tacos for cheap. Get the adobada & carnitas. Tastes richer when it's not rush hour. Order online to-go and eat in a nearby park.",
+    pics: []
+  }
+]

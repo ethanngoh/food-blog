@@ -1,19 +1,13 @@
+import ImageGallery from "react-image-gallery";
 import styled from "@emotion/styled";
 import { ColorKey, getColor } from "../colors";
-import { FlexCol, FlexRow } from "../stylePrimitives";
+import { FlexCol, FlexColC, FlexRow, H2, HR, HR2, BoundingBox } from "../stylePrimitives";
 import { MdFastfood, MdOutlineFireplace } from "react-icons/md";
-import { BiDollar } from "react-icons/bi";
+import { IoDiamondOutline } from "react-icons/io5";
 import { GiHotMeal } from "react-icons/gi";
 import { breakpoint } from "../breakpoints";
-import { MapView } from "./googleMaps";
-
-export enum PriceRating {
-  NONE = 0,
-  ONE = 1,
-  TWO = 2,
-  THREE = 3,
-  FOUR = 4
-}
+import { BusinessInfo } from "./businessInfo";
+import { useState } from "react";
 
 type RatingBarSingleProps = {
   widthPercent: string;
@@ -35,29 +29,36 @@ const RatingRow = styled(FlexRow)`
 `;
 
 const RatingBar = ({ rating, label }: { rating: number; label: React.ReactNode }) => {
-  if (rating > 4 || rating < 1) {
+  if (rating > 4 || rating < 0) {
     throw new Error("Rating out of bounds.");
   }
   const w = `25%`;
-  const c = "red";
 
   return (
     <FlexRow gap={"0.25rem"}>
       <span>{label}</span>
       <RatingRow gap={"3px"}>
-        <RatingBarSingle widthPercent={w} color={c} />
-        <RatingBarSingle widthPercent={w} color={"orange"} show={rating < 2} />
-        <RatingBarSingle widthPercent={w} color={"yellow"} show={rating < 3} />
-        <RatingBarSingle widthPercent={w} color={"green"} show={rating < 4} />
+        {rating > 0 ? (
+          <>
+            <RatingBarSingle widthPercent={w} color={getColor(ColorKey.RATING_1)} show={rating < 1} />
+            <RatingBarSingle widthPercent={w} color={getColor(ColorKey.RATING_2)} show={rating < 2} />
+            <RatingBarSingle widthPercent={w} color={getColor(ColorKey.RATING_3)} show={rating < 3} />
+            <RatingBarSingle widthPercent={w} color={getColor(ColorKey.RATING_4)} show={rating < 4} />
+          </>
+        ) : (
+          <span>N/A</span>
+        )}
       </RatingRow>
     </FlexRow>
   );
 };
 
 const Tag = styled.span`
-  background-color: red;
+  background-color: ${getColor(ColorKey.HASHTAG_BG)};
+  color: ${getColor(ColorKey.HASHTAG_FG)};
   padding: 0.1rem 0.5rem;
   font-size: 1rem;
+  border-radius: 1rem;
 `;
 
 const TagsContainer = styled(FlexRow)`
@@ -76,37 +77,87 @@ const Tags = ({ tags }: { tags: string[] }) => {
   );
 };
 
-const Content = () => {
-  return (
-    <FlexCol>
-      <span>Description blurb thing</span>
-      <span>Prob a picture here</span>
-      <span>Links, address, website, googlemaps link</span>
-      <MapView
-        center={{ lat: 47.7134886, lng: -122.182679 }}
-        marker={{ lat: 47.7134886, lng: -122.1804903 }}
-        zoom={16}
-      />
-    </FlexCol>
-  );
-};
+export enum Rating {
+  NONE = 0,
+  ONE = 1,
+  TWO = 2,
+  THREE = 3,
+  FOUR = 4
+}
 
-export const FancyFoodCard = ({ price }: { price: PriceRating }) => {
+export interface PicInfo {
+  name: string;
+  url: string;
+  foodGlobal: Rating;
+  foodLocal: Rating;
+  priceGlobal: Rating;
+  priceLocal: Rating;
+}
+
+export interface FoodInfo {
+  food: Rating;
+  price: Rating;
+  value: Rating;
+  ambiance: Rating;
+  service: Rating;
+  tags: string[];
+  placeId: string;
+  pics: PicInfo[];
+  notes: string;
+}
+
+const PriceSpan = styled.span`
+  color: green;
+`;
+
+export const FancyFoodCard = ({ foodInfo }: { foodInfo: FoodInfo }) => {
+  const [businessName, setBusinessName] = useState("");
+
+  const images = foodInfo.pics.map((x) => {
+    return {
+      original: `food/${x.url}`,
+      originalHeight: 400,
+      thumbnail: `food/${x.url}`,
+      thumbnailHeight: 60
+    };
+  });
+
   return (
     <FlexCol gap="1rem">
-      <h2>Due' Cucina Italiana (Totem Lake)</h2>
+      <H2>
+        {businessName} (<PriceSpan>{"$".repeat(foodInfo.price)}</PriceSpan>)
+      </H2>
       <FlexCol gap="0.25rem">
         <FlexRow gap="1rem">
-          <RatingBar rating={4} label={<MdFastfood />} />
-          <RatingBar rating={3} label={<BiDollar />} />
-          <RatingBar rating={2} label={<MdOutlineFireplace />} />
-          <RatingBar rating={3} label={<GiHotMeal />} />
+          <RatingBar rating={foodInfo.food} label={<MdFastfood />} />
+          <RatingBar rating={foodInfo.value} label={<IoDiamondOutline />} />
+          <RatingBar rating={foodInfo.ambiance} label={<MdOutlineFireplace />} />
+          <RatingBar rating={foodInfo.service} label={<GiHotMeal />} />
         </FlexRow>
-        <Tags tags={["seattle", "mexican", "tacos", "blah", "balalj", "balalj"]} />
+        <Tags tags={foodInfo.tags} />
       </FlexCol>
-      <FlexCol>
-        <Content />
-      </FlexCol>
+      <FlexColC gap="1rem">
+        <span>{foodInfo.notes}</span>
+        <HR2 color={getColor(ColorKey.HR)} />
+        <BoundingBox maxWidth={"41%"}>
+          <BusinessInfo placeId={foodInfo.placeId} setBusinessName={setBusinessName} />
+        </BoundingBox>
+      </FlexColC>
+      {images.length > 0 ? (
+        <FlexCol>
+          <HR2 color={getColor(ColorKey.HR)} />
+          <span>Food rating assoc with pic:</span>
+          <ImageGallery
+            items={images}
+            showFullscreenButton={false}
+            showPlayButton={false}
+            showThumbnails={false}
+            showIndex={true}
+            indexSeparator={" of "}
+          />
+        </FlexCol>
+      ) : null}
+      <HR color={getColor(ColorKey.HR)} />
     </FlexCol>
   );
 };
