@@ -33,6 +33,10 @@ export const FlexRow = styled.div<FlexRowProps>`
   justify-content: ${(props) => (props.center ? "center" : "start")};
 `;
 
+export const FlexRowC = styled(FlexRow)`
+  align-items: center;
+`;
+
 export const RespRow = styled.div<FlexRowProps>`
   display: flex;
   @media ${breakpoint.xs} {

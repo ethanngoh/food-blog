@@ -78,33 +78,41 @@ export const BusinessInfo = ({
   const [openingHours, setOpeningHours] = useState<google.maps.places.PlaceOpeningHours>();
   const [isPlaceLoaded, setPlaceLoaded] = useState(false);
 
-  const onLoad = useCallback((map: google.maps.Map) => {
-    setMap(map);
-  }, []);
+  const onLoad = useCallback(
+    (map: google.maps.Map) => {
+      const places = new google.maps.places.PlacesService(map!);
+      places.getDetails({ placeId }, (place) => {
+        if (
+          !place ||
+          !place.geometry ||
+          !place.geometry.location ||
+          !place.name ||
+          !place.url ||
+          !place.website ||
+          !place.formatted_address
+        ) {
+          return;
+        }
 
-  useEffect(() => {
-    const places = new google.maps.places.PlacesService(map!);
-    places.getDetails({ placeId }, (place) => {
-      if (!place || !place.geometry || !place.geometry.location) {
-        return;
-      }
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
 
-      var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
+        setBusinessName(place.name!);
+        setOpeningHours(place.opening_hours);
+        setGoogleMapsUrl(place.url!);
+        setWebsite(place.website!);
+        setAddr(place.formatted_address!);
+
+        setMarkerPosition(marker.getPosition());
+        setPlaceLoaded(true);
+        map?.fitBounds(place.geometry.viewport!);
       });
-
-      setBusinessName(place.name!);
-      setOpeningHours(place.opening_hours);
-      setGoogleMapsUrl(place.url!);
-      setWebsite(place.website!);
-      setAddr(place.formatted_address!);
-
-      setMarkerPosition(marker.getPosition());
-      setPlaceLoaded(true);
-      map?.fitBounds(place.geometry.viewport!);
-    });
-  }, [map, placeId, setBusinessName]);
+      setMap(map);
+    },
+    [placeId, setBusinessName]
+  );
 
   const onUnmount = useCallback((map: google.maps.Map) => {
     setMap(undefined);

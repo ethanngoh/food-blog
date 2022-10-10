@@ -10,7 +10,7 @@ type RatingBarSingleProps = {
   show?: boolean;
 };
 
-const RatingBarSingle = styled.div<RatingBarSingleProps>`
+export const RatingBarSingle = styled.div<RatingBarSingleProps>`
   width: ${(props) => props.widthPercent};
   border-top: 5px solid ${(props) => (props.show ? getColor(ColorKey.BACKGROUND) : props.color)};
 `;

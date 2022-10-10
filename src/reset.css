@@ -131,3 +131,7 @@ table {
 a {
   text-decoration: none;
 }
+
+button {
+  background-color: initial;
+}

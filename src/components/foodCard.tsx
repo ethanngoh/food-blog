@@ -90,7 +90,6 @@ export const FoodCard = ({ foodInfo }: { foodInfo: FoodInfo }) => {
           />
         </FlexCol>
       ) : null}
-      <HR color={getColor(ColorKey.HR)} />
     </FlexCol>
   );
 };

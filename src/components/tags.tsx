@@ -20,7 +20,7 @@ export const Tags = ({ tags }: { tags: string[] }) => {
   return (
     <TagsContainer>
       {tags.map((a) => (
-        <Tag>#{a}</Tag>
+        <Tag key={a}>#{a}</Tag>
       ))}
     </TagsContainer>
   );

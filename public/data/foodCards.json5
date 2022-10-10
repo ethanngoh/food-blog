@@ -1,5 +1,41 @@
 [
   {
+    // Katsu Burger - Bellevue
+    food: 4,
+    price: 2,
+    value: 4,
+    ambiance: 1,
+    service: 0,
+    tags: ["bellevue", "burger", "japanese", "fusion"],
+    placeId: "ChIJn8hfrKpukFQR0woE0dq8ncE",
+    notes: "Unique take on a burger. The Katsu Curry burger is one of its kind. Don't miss the nori fries and the sesame kinako shake either.",
+    pics: []
+  },
+  {
+    // Tipsy Cow - Redmond
+    food: 5,
+    price: 2,
+    value: 3,
+    ambiance: 3,
+    service: 3,
+    tags: ["redmond", "burger", "gourmetburger"],
+    placeId: "ChIJQxylHa5ykFQRxjVVa3M3Gyg",
+    notes: "The best gourmet burger chain in town. Rockstar, brewmaster, winemaker are all solid options. Truffle fries, jacked up fries, or onion rings would not go amiss. If feeling decadent, get a boozy shake to go with it!",
+    pics: []
+  },
+  {
+    // Burgermaster - Bellevue
+    food: 3,
+    price: 2,
+    value: 2,
+    ambiance: 0,
+    service: 0,
+    tags: ["bellevue", "burger"],
+    placeId: "ChIJN6aOHsVskFQRl4seUuJTbwo",
+    notes: "A Seattle native drive through burger chain. Frankly, the beef burgers aren't great. However, the fish sandwich is pretty darn good. Get a fresh banana shake while you're at it. Fries very optional.",
+    pics: []
+  },
+  {
     // Silverlake ramen
     food: 4,
     price: 2,
