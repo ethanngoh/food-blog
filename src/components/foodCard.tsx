@@ -5,7 +5,7 @@ import { IoDiamondOutline } from "react-icons/io5";
 import { MdFastfood, MdOutlineFireplace } from "react-icons/md";
 import ImageGallery from "react-image-gallery";
 import { ColorKey, getColor } from "../colors";
-import { BoundingBox, FlexCol, FlexColC, FlexRow, H2, HR, HR2 } from "../stylePrimitives";
+import { BoundingBox, FlexCol, FlexColC, FlexRow, H2, HR2 } from "../stylePrimitives";
 import { BusinessInfo } from "./businessInfo";
 import { RatingBar } from "./ratingBar";
 import { Tags } from "./tags";

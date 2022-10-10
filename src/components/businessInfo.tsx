@@ -70,7 +70,7 @@ export const BusinessInfo = ({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY!
   });
 
-  const [map, setMap] = useState<google.maps.Map & Partial<unknown>>();
+  const [, setMap] = useState<google.maps.Map & Partial<unknown>>();
   const [markerPosition, setMarkerPosition] = useState<google.maps.LatLng | null | undefined>();
   const [addr, setAddr] = useState<string>("");
   const [website, setWebsite] = useState<string>("");

@@ -25,7 +25,6 @@ export const Backdrop = styled.div`
 export const FullScreenModal = styled(Modal)`
   position: fixed;
   z-index: 2;
-  border: 1px solid #e5e5e5;
   background-color: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   top: 50%;

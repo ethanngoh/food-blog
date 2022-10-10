@@ -12,7 +12,7 @@ type RatingBarSingleProps = {
 
 export const RatingBarSingle = styled.div<RatingBarSingleProps>`
   width: ${(props) => props.widthPercent};
-  border-top: 5px solid ${(props) => (props.show ? getColor(ColorKey.BACKGROUND) : props.color)};
+  border-top: 5px solid ${(props) => (props.show ? getColor(ColorKey.BACKGROUND2) : props.color)};
 `;
 
 const RatingRow = styled(FlexRow)`
