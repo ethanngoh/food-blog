@@ -69,15 +69,17 @@ export const Index = () => {
   const renderBackdrop = (props: any) => <Backdrop {...props} />;
 
   const paginateFoodCards = () => {
-    const PAGE_SIZE = 3;
-    var nIdx = currentFoodCardIdx + PAGE_SIZE;
-    if (nIdx > foodCardData.length) {
-      nIdx = foodCardData.length;
-      setHasMore(false);
-    }
+    setTimeout(() => {
+      const PAGE_SIZE = 3;
+      var nIdx = currentFoodCardIdx + PAGE_SIZE;
+      if (nIdx > foodCardData.length) {
+        nIdx = foodCardData.length;
+        setHasMore(false);
+      }
 
-    setFoodCards(getFoodCardView(foodCardData, nIdx));
-    setCurrentFoodCardIdx(nIdx);
+      setFoodCards(getFoodCardView(foodCardData, nIdx));
+      setCurrentFoodCardIdx(nIdx);
+    }, 2000);
   };
 
   return (
@@ -99,12 +101,17 @@ export const Index = () => {
             dataLength={currentFoodCardIdx} //This is important field to render the next data
             next={paginateFoodCards}
             hasMore={hasMore}
-            loader={<h4>Loading...</h4>}
+            loader={
+              <EndMessage>
+                <b>Loading ...</b>
+              </EndMessage>
+            }
             endMessage={
               <EndMessage>
                 <b>You've seen all the recommendations!</b>
               </EndMessage>
             }
+            scrollThreshold={0.6}
             style={{ overflow: "hidden" }}
           >
             <FoodCards gap={"1rem"}>{foodCards}</FoodCards>
