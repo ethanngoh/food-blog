@@ -1,5 +1,17 @@
 [
   {
+    // Bok-a-bok - Totem Lake
+    food: 2,
+    price: 2,
+    value: 2,
+    ambiance: 0,
+    service: 0,
+    tags: ["kirkland", "korean", "friedchicken"],
+    placeId: "ChIJR9Ny94oNkFQRi01wRm6rKyM",
+    notes: "Korean fried chicken. So many sauces but none of them amazing. Breading could be more delicate. The dirty tots are probably the best thing. Edible, but very mediocre fried chicken.",
+    pics: []
+  },
+  {
     // Katsu Burger - Bellevue
     food: 4,
     price: 2,
