@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
 import { ColorKey, getColor } from "../colors";
 import { downloadFoodCards } from "../components/dataGetter";
-import { FancyFoodCard, FoodInfo } from "../components/foodCard";
+import { FoodCard, FoodInfo } from "../components/foodCard";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
 import { useTextColor } from "../hooks/useTextColor";
 import { FlexCol, H1, Page } from "../stylePrimitives";
@@ -39,7 +39,7 @@ export const Index = () => {
         {dataLoaded ? (
           <FoodCards gap={"1rem"}>
             {foodCardData.map((f) => (
-              <FancyFoodCard foodInfo={f} />
+              <FoodCard foodInfo={f} />
             ))}
           </FoodCards>
         ) : null}

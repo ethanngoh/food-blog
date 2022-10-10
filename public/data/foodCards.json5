@@ -1,5 +1,77 @@
 [
   {
+    // Silverlake ramen
+    food: 4,
+    price: 2,
+    value: 3,
+    ambiance: 2,
+    service: 2,
+    tags: ["kirkland", "japanese", "ramen"],
+    placeId: "ChIJSwqy9yQNkFQRAF7y0T8DtCg",
+    notes: "One of the better Ramen places in Seattle (a ramen dead zone). Ramen broth is unique - milkly chicken broth. Blaze or Classic ramen are the best. Chicken Karaage or Spicy Tuna Crispy Rice are solid appetizers.",
+    pics: []
+  },
+  {
+    // Xi'an Noodle
+    food: 3,
+    price: 2,
+    value: 2,
+    ambiance: 2,
+    service: 2,
+    tags: ["kirkland", "italian", "pasta", "pizza", "bistro"],
+    placeId: "ChIJPwWk_5NtkFQRZ-PrNGZV4Ms",
+    notes: "Solid spot for Xi An Biang Biang Noodles. The dry noodles are slightly more tasty than the soup noodles, appetizers are meh.",
+    pics: []
+  },
+  {
+    // COMO
+    food: 5,
+    price: 3,
+    value: 5,
+    ambiance: 4,
+    service: 3,
+    tags: ["kirkland", "italian", "pasta", "pizza", "bistro"],
+    placeId: "ChIJwwuMx_ETkFQR13oDe_rvyZ0",
+    notes: "Best Italian bistro restaurant in the area. Taste is incredibly authentic, and portions are generous. Great view over Lake Washington to watch a sunset while eating dinner. Indoor dining is rather loud, but it's well worth going back multiple times. All dishes are good - even more notably do not miss the Fried Artichoke Hearts.",
+    pics: []
+  },
+  {
+    // Liu Yi Shou
+    food: 4,
+    price: 3,
+    value: 2,
+    ambiance: 3,
+    service: 2,
+    tags: ["bellevue", "asian", "hotpot", "sichuan"],
+    placeId: "ChIJF6Q8F_FtkFQRVSNnJdLAsyQ",
+    notes: "One of the better modern hot pot places in the area. Spicy levels are calibrated to Sichuan tastes ('medium' is almost too spicy). Meat quality and sauce bar are good, marginally cheaper than Hai Di Lao.",
+    pics: []
+  },
+  {
+    // Boiling Point
+    food: 3,
+    price: 2,
+    value: 2,
+    ambiance: 3,
+    service: 2,
+    tags: ["bellevue", "asian", "hotpot", "taiwanese"],
+    placeId: "ChIJcYllSY5skFQR6nwQnUGLsQA",
+    notes: "Personal hot pot. Soup bases and dipping sauces are pretty good. Solid choice for a dinner if one is out of ideas. Spicy Beef, or pumpkin broth are good choices. Beware, taiwanese spicy is fairly extreme.",
+    pics: []
+  },
+  {
+    // Spicy City
+    food: 5,
+    price: 2,
+    value: 5,
+    ambiance: 3,
+    service: 2,
+    tags: ["bellevue", "asian", "sichuan"],
+    placeId: "ChIJVVVFGrNykFQRYECzjYyJe44",
+    notes: "The best Sichuan food in the area (2022). Spicy+numbing flavor is on point. Bring a Chinese speaking person for the best experience. Great 辣子雞, 麻婆豆腐, 魚香茄子, and other Sichuan staples.",
+    pics: []
+  },
+  {
     // Due Cucina Totem Lake
     food: 3,
     price: 2,
@@ -38,6 +110,18 @@
     tags: ["bellevue", "tacos", "mexican"],
     placeId: "ChIJuavoTwFtkFQR2NF17zsFLt4",
     notes: "Great tacos for cheap. Get the adobada & carnitas. Tastes richer when it's not rush hour. Order online to-go and eat in a nearby park.",
+    pics: []
+  },
+  {
+    // Looking for chai
+    food: 4,
+    price: 2,
+    value: 5,
+    ambiance: 2,
+    service: 2,
+    tags: ["bellevue", "asian", "taiwanese"],
+    placeId: "ChIJq8KMPuVskFQRHt2uy0YCBQA",
+    notes: "Best taiwanese restaurant in the area. Serves a mixture of authentic restaurant comfort food and taiwanese street food an affordable price point for the Seattle area. Mini hotpots (great value), 蔥爆牛肉 and 椒麻脆皮雞 are worthy of note.",
     pics: []
   }
 ]

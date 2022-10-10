@@ -1,81 +1,14 @@
-import ImageGallery from "react-image-gallery";
 import styled from "@emotion/styled";
-import { ColorKey, getColor } from "../colors";
-import { FlexCol, FlexColC, FlexRow, H2, HR, HR2, BoundingBox } from "../stylePrimitives";
-import { MdFastfood, MdOutlineFireplace } from "react-icons/md";
-import { IoDiamondOutline } from "react-icons/io5";
-import { GiHotMeal } from "react-icons/gi";
-import { breakpoint } from "../breakpoints";
-import { BusinessInfo } from "./businessInfo";
 import { useState } from "react";
-
-type RatingBarSingleProps = {
-  widthPercent: string;
-  color: string;
-  show?: boolean;
-};
-
-const RatingBarSingle = styled.div<RatingBarSingleProps>`
-  width: ${(props) => props.widthPercent};
-  border-top: 5px solid ${(props) => (props.show ? getColor(ColorKey.BACKGROUND) : props.color)};
-`;
-
-const RatingRow = styled(FlexRow)`
-  align-items: center;
-  width: 5rem;
-  @media ${breakpoint.xs} {
-    width: 3rem;
-  }
-`;
-
-const RatingBar = ({ rating, label }: { rating: number; label: React.ReactNode }) => {
-  if (rating > 4 || rating < 0) {
-    throw new Error("Rating out of bounds.");
-  }
-  const w = `25%`;
-
-  return (
-    <FlexRow gap={"0.25rem"}>
-      <span>{label}</span>
-      <RatingRow gap={"3px"}>
-        {rating > 0 ? (
-          <>
-            <RatingBarSingle widthPercent={w} color={getColor(ColorKey.RATING_1)} show={rating < 1} />
-            <RatingBarSingle widthPercent={w} color={getColor(ColorKey.RATING_2)} show={rating < 2} />
-            <RatingBarSingle widthPercent={w} color={getColor(ColorKey.RATING_3)} show={rating < 3} />
-            <RatingBarSingle widthPercent={w} color={getColor(ColorKey.RATING_4)} show={rating < 4} />
-          </>
-        ) : (
-          <span>N/A</span>
-        )}
-      </RatingRow>
-    </FlexRow>
-  );
-};
-
-const Tag = styled.span`
-  background-color: ${getColor(ColorKey.HASHTAG_BG)};
-  color: ${getColor(ColorKey.HASHTAG_FG)};
-  padding: 0.1rem 0.5rem;
-  font-size: 1rem;
-  border-radius: 1rem;
-`;
-
-const TagsContainer = styled(FlexRow)`
-  flex-wrap: wrap;
-  row-gap: 5px;
-  gap: 5px;
-`;
-
-const Tags = ({ tags }: { tags: string[] }) => {
-  return (
-    <TagsContainer>
-      {tags.map((a) => (
-        <Tag>#{a}</Tag>
-      ))}
-    </TagsContainer>
-  );
-};
+import { GiHotMeal } from "react-icons/gi";
+import { IoDiamondOutline } from "react-icons/io5";
+import { MdFastfood, MdOutlineFireplace } from "react-icons/md";
+import ImageGallery from "react-image-gallery";
+import { ColorKey, getColor } from "../colors";
+import { BoundingBox, FlexCol, FlexColC, FlexRow, H2, HR, HR2 } from "../stylePrimitives";
+import { BusinessInfo } from "./businessInfo";
+import { RatingBar } from "./ratingBar";
+import { Tags } from "./tags";
 
 export enum Rating {
   NONE = 0,
@@ -110,7 +43,7 @@ const PriceSpan = styled.span`
   color: green;
 `;
 
-export const FancyFoodCard = ({ foodInfo }: { foodInfo: FoodInfo }) => {
+export const FoodCard = ({ foodInfo }: { foodInfo: FoodInfo }) => {
   const [businessName, setBusinessName] = useState("");
 
   const images = foodInfo.pics.map((x) => {
