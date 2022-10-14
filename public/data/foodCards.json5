@@ -1,5 +1,41 @@
 [
   {
+    // Dough Zone
+    food: 1,
+    price: 3,
+    value: 1,
+    ambiance: 2,
+    service: 2,
+    tags: ["bellevue", "chinese", "xiaolongbao"],
+    placeId: "ChIJl0CSabBtkFQRrqopqhRluJw",
+    notes: "Just don't. This place is a disgusting corporate money grab. All food tastes exactly the same - it's like they made one big batch of meat and used that as the base for every dish. I've given this place several benefits of the doubt to see if their food would improve, but it hasn't at all over the years. If you had to eat here, eat before, and maybe eat 1 Q-Bao, and nothing else. I judge people who recommend this place to others.",
+    pics: []
+  },
+  {
+    // Ding Tai Feng
+    food: 3,
+    price: 3,
+    value: 3,
+    ambiance: 2,
+    service: 3,
+    tags: ["bellevue", "chinese", "xiaolongbao"],
+    placeId: "ChIJrcrho4dskFQROHfX02ZeENg",
+    notes: "The chain that made Xiao Long Bao popular worldwide. One of your better options for America, but don't expect the same level of price and quality that one gets in Asia however.",
+    pics: []
+  },
+  {
+    // Supreme Dumpling
+    food: 3,
+    price: 3,
+    value: 3,
+    ambiance: 3,
+    service: 3,
+    tags: ["bellevue", "chinese", "xiaolongbao"],
+    placeId: "ChIJ_fbAUWVtkFQRqLBlBvTTYVA",
+    notes: "Xiao long bao done the Shanghainese way - tasty gelatinous soup insides. Stick with the original and crab XLB, skip the spicy ones. Sides and appetizers are a little lacking and lackluster. Happy that there's another acceptable option other than Ding Tai Feng!",
+    pics: []
+  },
+  {
     // Bok-a-bok - Totem Lake
     food: 2,
     price: 2,
