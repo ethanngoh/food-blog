@@ -1,5 +1,29 @@
 [
   {
+    // Onda Origins Cafe
+    food: 3,
+    price: 2,
+    value: 2,
+    ambiance: 3,
+    service: 3,
+    tags: ["seattle", "georgetown", "burgers", "smashburger"],
+    placeId: "ChIJkYPVLvZrkFQRHKn6bTcAx5Y",
+    notes: "Chill neighborhood coffee shop in the Columbia City area. Has seating if you want to work. Coffee was acceptable, perhaps on the healthier (bitter) side for both the cappuchino and chai latte.",
+    pics: []
+  },
+  {
+    // Lorettas Northwesterner
+    food: 5,
+    price: 1,
+    value: 5,
+    ambiance: 2,
+    service: 3,
+    tags: ["seattle", "georgetown", "burgers", "smashburger"],
+    placeId: "ChIJPcnUUy9CkFQRqAady2nwWgc",
+    notes: "This place is a hidden gem. The best smash burger in the area, with added benefit that they serve cheese fries done right (Irish Nachos on the menu)! Burgers are grilled at extremely high heat which gives them the perfect amount of char not found at other burger joints in the area. Highly recommend making a trip out there for a old western pub style ambiance with very solid local beers.",
+    pics: []
+  },
+  {
     // Dough Zone
     food: 1,
     price: 3,
