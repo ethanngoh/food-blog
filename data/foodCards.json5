@@ -1,5 +1,17 @@
 [
   {
+    // Garlic Crush
+    food: 4,
+    price: 1,
+    value: 5,
+    ambiance: 2,
+    service: 2,
+    tags: ["bellevue", "mediterranean", "gyro"],
+    placeId: "ChIJT1AHfYdskFQROdDhW3pQxSg",
+    notes: "Really solid gyros and for extremely affordable prices. They have several locations around the area; business isn't overrun by corporate greed, and is one of the iconic Seattle area places. Gyro Sandwich, garlic fries, falafel, baklawa are highly recommended!",
+    pics: []
+  },
+  {
     // Onda Origins Cafe
     food: 3,
     price: 2,
