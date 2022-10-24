@@ -1,5 +1,17 @@
 [
   {
+    // Dim Sum Factory
+    food: 1,
+    price: 3,
+    value: 1,
+    ambiance: 2,
+    service: 2,
+    tags: ["bellevue", "dim sum"],
+    placeId: "ChIJD6fGb1ppkFQRCy790M4JqAg",
+    notes: "This place is quite terrible. Bland food, little variety, double portion sizes (8 燒賣 in one order??? who does this?), topped with a really slow kitchen and exorbitant prices compared to its nearby competitors. There are literally no redeeming factors about this place, stay away!",
+    pics: []
+  },
+  {
     // Garlic Crush
     food: 4,
     price: 1,
