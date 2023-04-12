@@ -1,5 +1,125 @@
 [
   {
+    // Kokkaku
+    food: 4,
+    price: 3,
+    value: 4,
+    ambiance: 3,
+    service: 2,
+    tags: ["seattle", "japanese", "italian", "fusion"],
+    placeId: "ChIJU-rJ2NRrkFQR6ZDBlYGygCY",
+    notes: "Japanese Italian fusion done well. This place popped my uni carbonara cherry, and I've been on the lookout ever since. Grilled steak reminiscent of Carne Asada Steak, Katsu Sando... etc are all pretty good.",
+    pics: []
+  },
+  {
+    // Cookies Country Chicken
+    food: 4,
+    price: 2,
+    value: 4,
+    ambiance: 2,
+    service: 2,
+    tags: ["seattle", "ballard", "fried chicken", "chicken sandwich"],
+    placeId: "ChIJU-rJ2NRrkFQR6ZDBlYGygCY",
+    notes: "Their signature chicken sandwich is good. Probably one of the better crispy chicken sandwiches I've had overall. It'll probably give the McSpicy in Singapore a run for it's money... if they existed in the same country.",
+    pics: []
+  },
+  {
+    // Issaquah Cafe
+    food: 4,
+    price: 2,
+    value: 4,
+    ambiance: 2,
+    service: 2,
+    tags: ["issaquah", "country fried steak", "diner"],
+    placeId: "ChIJEQe53gpvkFQRwp8fKwgr_9A",
+    notes: "I have a soft spot for east coast style diners, (specifically for country fried steak), and this place hits the mark. Solid old school diner.",
+    pics: []
+  },
+  {
+    // Kobuta & Ookami Katsu
+    food: 2,
+    price: 3,
+    value: 1,
+    ambiance: 2,
+    service: 2,
+    tags: ["seattle", "katsu", "japanese"],
+    placeId: "ChIJ559YzkZrkFQR6wQBHqjKo94",
+    notes: "I had high hopes for this place based on pictures, but I'm still on my quest to find ANY place in the continental US that does japanese katsu correctly. WHY IS IT SO HARD?",
+    pics: []
+  },
+  {
+    // Brileys BBQ
+    food: 4,
+    price: 2,
+    value: 4,
+    ambiance: 2,
+    service: 0,
+    tags: ["shoreline", "bbq", "southern"],
+    placeId: "ChIJKQbkIKIRkFQRGMepeRlvJ0I",
+    notes: "Pretty good Texas style southern BBQ, ignoring that any BBQ is a rare find out in the PNW. Pulled pork sandwich is pretty darn good. Brisket is solid. Various thick BBQ sauces to choose from to lubricate your meat.",
+    pics: []
+  },
+  {
+    // Sugo Hand Roll
+    food: 4,
+    price: 3,
+    value: 3,
+    ambiance: 3,
+    service: 2,
+    tags: ["seattle", "sushi", "hand roll"],
+    placeId: "ChIJu7etpnAVkFQRVxcLsAKUXsY",
+    notes: "The 2021-22 fad of serving hand rolls at a 'sushi bar'. Fast paced eating allows the restaurant to turn tables faster for more revenue. Fish quailty is decent, but not a place you'd want to linger and chat. If you're careless, you can eat a hole through your wallet here.",
+    pics: []
+  },
+  {
+    // Palace - Bellevue
+    food: 3,
+    price: 3,
+    value: 3,
+    ambiance: 2,
+    service: 2,
+    tags: ["bellevue", "korean", "kbbq"],
+    placeId: "ChIJLVdW_bltkFQRmF2obqKmMvc",
+    notes: "Didn't want to drive all the way out to Federal Way or Lynnwood? Here's your easy Bellevue neighborhood kbbq place. Decent value, decent food.",
+    pics: []
+  },
+  {
+    // Exit 5
+    food: 3,
+    price: 4,
+    value: 2,
+    ambiance: 3,
+    service: 3,
+    tags: ["renton", "korean", "kbbq"],
+    placeId: "ChIJZ11dM4hpkFQRXo4RyMAejjI",
+    notes: "Slightly bouged up kbbq. Expect to pay 'modern' kbbq prices where everything is ala-carte and $70+ pp. Ingredient quality is higher than the basic kbbq joints. Good, but is it worth it?",
+    pics: []
+  },
+  {
+    // So Tasty
+    food: 5,
+    price: 2,
+    value: 4,
+    ambiance: 3,
+    service: 2,
+    tags: ["bellevue", "asian", "fried chicken", "kfc", "taiwanese", "hong kong", "egg tart"],
+    placeId: "ChIJ8TaDFvltkFQR-kA_hUcQLzs",
+    notes: "The fried chicken here is the epitome of fried chicken, HK/Taiwanese style. If you've ever had KFC in Asia and know what I'm talking about, this place does it like that. Move out of the way Ezell's, Popeyes, Bojangles, or Korean Fried Chicken, you all are bad. Beware, every else on the menu sucks so just stick with the fried chicken, waffle fries, and egg tart.",
+    pics: []
+  },
+  {
+    // Da Long Yi
+    food: 4,
+    price: 3,
+    value: 4,
+    ambiance: 3,
+    service: 2,
+    tags: ["seattle", "greenlake", "hot pot", "sichuan", "asian"],
+    placeId: "ChIJE61BPfsVkFQR679cuw7yV8w",
+    notes: "This place is solid. All you can eat at the price of Happy Lamb (which sucks ass), but with way better ingredient quality. Service was a little slow the one time I went.",
+    pics: []
+  },
+  {
     // Dim Sum Factory
     food: 1,
     price: 3,
@@ -24,13 +144,25 @@
     pics: []
   },
   {
+    // Shin Sung
+    food: 3,
+    price: 2,
+    value: 5,
+    ambiance: 2,
+    service: 2,
+    tags: ["federal way", "korean", "kbbq"],
+    placeId: "ChIJUZdGp3lXkFQRW7wvmvNMQAk",
+    notes: "Best value for money old school style kbbq. Extremely cheap all your can eat options - meat, salt, pepper, and seasame oil all day.",
+    pics: []
+  },
+  {
     // Onda Origins Cafe
     food: 3,
     price: 2,
     value: 2,
     ambiance: 3,
     service: 3,
-    tags: ["seattle", "georgetown", "burgers", "smashburger"],
+    tags: ["seattle", "coffee", "coffeeshop"],
     placeId: "ChIJkYPVLvZrkFQRHKn6bTcAx5Y",
     notes: "Chill neighborhood coffee shop in the Columbia City area. Has seating if you want to work. Coffee was acceptable, perhaps on the healthier (bitter) side for both the cappuchino and chai latte.",
     pics: []
@@ -60,7 +192,7 @@
     pics: []
   },
   {
-    // Ding Tai Feng
+    // Ding Tai Fung
     food: 3,
     price: 3,
     value: 3,
@@ -80,7 +212,7 @@
     service: 3,
     tags: ["bellevue", "chinese", "xiaolongbao"],
     placeId: "ChIJ_fbAUWVtkFQRqLBlBvTTYVA",
-    notes: "Xiao long bao done the Shanghainese way - tasty gelatinous soup insides. Stick with the original and crab XLB, skip the spicy ones. Sides and appetizers are a little lacking and lackluster. Happy that there's another acceptable option other than Ding Tai Feng!",
+    notes: "Xiao long bao done the Shanghainese way - tasty gelatinous soup insides. Stick with the original and crab XLB, skip the spicy ones. Sides and appetizers are a little lacking and lackluster. Happy that there's another acceptable option other than Ding Tai Fung!",
     pics: []
   },
   {
@@ -200,7 +332,7 @@
     service: 2,
     tags: ["bellevue", "asian", "sichuan"],
     placeId: "ChIJVVVFGrNykFQRYECzjYyJe44",
-    notes: "The best Sichuan food in the area (2022). Spicy+numbing flavor is on point. Bring a Chinese speaking person for the best experience. Great 辣子雞, 麻婆豆腐, 魚香茄子, and other Sichuan staples.",
+    notes: "[CLOSED 2023-04-11] UGH FML. The best Sichuan food in the area (2022). Spicy+numbing flavor is on point. Bring a Chinese speaking person for the best experience. Great 辣子雞, 麻婆豆腐, 魚香茄子, and other Sichuan staples.",
     pics: []
   },
   {

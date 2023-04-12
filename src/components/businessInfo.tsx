@@ -67,7 +67,7 @@ export const BusinessInfo = ({
 }) => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY!
+    googleMapsApiKey: "AIzaSyBP1Q61PGbi1G3lbNooRpxBy3n44YkvUMg"
   });
 
   const [, setMap] = useState<google.maps.Map & Partial<unknown>>();
